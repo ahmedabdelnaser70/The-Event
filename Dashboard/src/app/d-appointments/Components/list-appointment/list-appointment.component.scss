@@ -1,0 +1,40 @@
+.example-spacer {
+    flex: 1 1 ;
+  }
+
+mat-table{
+  background-color: #248ccc;
+}
+
+mat-cell, mat-header-cell{
+  color: white;
+}
+
+
+
+.mat-toolbar{
+  background-color: #207bb4;
+  color: white;
+}
+
+.mat-mdc-raised-button.mat-unthemed {
+  --mdc-protected-button-container-color: white;
+  --mdc-protected-button-label-text-color: #207bb4;
+}
+
+.mat-mdc-raised-button:hover{
+  --mdc-protected-button-container-color: rgb(240, 240, 240);
+}
+
+.mat-mdc-paginator{
+  background-color: #207bb4;
+  color: white;
+}
+
+th,td{
+  color: white;
+}
+
+.mat-mdc-form-field-type-mat-input{
+  width: 100%
+}
