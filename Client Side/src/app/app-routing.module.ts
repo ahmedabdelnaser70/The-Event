@@ -25,6 +25,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
   },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./account/account.module').then((m) => m.AccountModule),
+  },
   { path: 'ticket', component: TicketsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
