@@ -7,8 +7,6 @@ import { TicketsComponent } from './Tickets/tickets.component';
 import { NotFoundComponent } from './Not Found/not-found.component';
 
 const routes: Routes = [
-  // { path: 'login', component: PostLoginComponent },
-  // { path: 'register', component: RegisterationComponent },
   { path: 'home', component: HomeComponent },
   {
     path: 'event',

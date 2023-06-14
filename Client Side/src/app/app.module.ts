@@ -15,8 +15,7 @@ import { SponsersModule } from './Sponsers/sponsers.module';
 import { VenueModule } from './Venue/venue.module';
 import { TicketsModule } from './Tickets/tickets.module';
 import { NotFoundComponent } from './Not Found/not-found.component';
-import { LoginModule } from './Login/login.module';
-import { RegisterModule } from './Register/register.module';
+
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -34,8 +33,6 @@ import { RegisterModule } from './Register/register.module';
     SponsersModule,
     VenueModule,
     TicketsModule,
-    LoginModule,
-    RegisterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
