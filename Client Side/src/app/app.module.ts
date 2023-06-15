@@ -13,9 +13,9 @@ import { HotelsModule } from './Hotels/hotels.module';
 import { SpeakersModule } from './Speakers/speakers.module';
 import { SponsersModule } from './Sponsers/sponsers.module';
 import { VenueModule } from './Venue/venue.module';
-import { TicketsModule } from './Tickets/tickets.module';
-import { NotFoundComponent } from './Not Found/not-found.component';
 
+import { NotFoundComponent } from './Not Found/not-found.component';
+import { ShopingCartModule } from './shoping-cart/shopping-cart.module';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -32,7 +32,7 @@ import { NotFoundComponent } from './Not Found/not-found.component';
     SpeakersModule,
     SponsersModule,
     VenueModule,
-    TicketsModule,
+    ShopingCartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

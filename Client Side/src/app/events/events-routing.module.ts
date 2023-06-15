@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { EventsComponent } from './events.component';
 import { EventDetailsComponent } from './Components/event-details/event-details.component';
+import { EventTicketComponent } from './Components/event-ticket/event-ticket.component';
 
 const routes: Routes = [
   { path: '', component: EventsComponent },
+  { path: 'ticket', component: EventTicketComponent },
   { path: 'details', component: EventDetailsComponent },
 ];
 

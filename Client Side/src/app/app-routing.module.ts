@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { EventsComponent } from './events/events.component';
-import { TicketsComponent } from './Tickets/tickets.component';
+
 import { NotFoundComponent } from './Not Found/not-found.component';
 
 const routes: Routes = [
@@ -23,7 +23,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
   },
-  { path: 'ticket', component: TicketsComponent },
+  {
+    path: 'shoppingcart',
+    loadChildren: () =>
+      import('./shoping-cart/shopping-cart.module').then(
+        (m) => m.ShopingCartModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
