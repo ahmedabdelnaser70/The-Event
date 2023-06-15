@@ -50,7 +50,12 @@
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
     <!-- .navbar -->
-    <a class="buy-tickets scrollto" href="#buy-tickets">Buy Tickets</a>
+    <a class="buy-tickets scrollto" [routerLink]="['/ticket']">Book Tickets</a>
+    <a class="buy-tickets scrollto" [routerLink]="['/shoppingcart']">
+     <span></span>
+      <span><i class="fas fa-shopping-cart  "></i></span>
+       <span class="badge badge-pill bg-danger">0</span> 
+    </a>
   </div>
 </header>
 <!-- End Header -->
