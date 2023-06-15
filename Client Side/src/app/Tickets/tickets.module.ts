@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { TicketsComponent } from './tickets.component';
 import { TicketPurchaseComponent } from './Components/ticket-purchase/ticket-purchase.component';
-
+import { TicketsRoutingModule } from './tickets-routing.module';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { TicketPurchaseComponent } from './Components/ticket-purchase/ticket-pur
     TicketPurchaseComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,RouterModule,TicketsRoutingModule
   ]
 })
 export class TicketsModule { }
