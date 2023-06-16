@@ -9,7 +9,6 @@ import { CoreModule } from './core/core.module';
 import { EventsModule } from './events/events.module';
 import { GalleryModule } from './Gallery/gallery.module';
 import { HomeModule } from './Home/home.module';
-import { HotelsModule } from './Hotels/hotels.module';
 import { SpeakersModule } from './Speakers/speakers.module';
 import { SponsersModule } from './Sponsers/sponsers.module';
 import { VenueModule } from './Venue/venue.module';
@@ -28,7 +27,6 @@ import { ShopingCartModule } from './shoping-cart/shopping-cart.module';
     EventsModule,
     GalleryModule,
     HomeModule,
-    HotelsModule,
     SpeakersModule,
     SponsersModule,
     VenueModule,
