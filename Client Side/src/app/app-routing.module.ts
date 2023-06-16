@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { EventsComponent } from './events/events.component';
-import { TicketsComponent } from './Tickets/tickets.component';
 import { NotFoundComponent } from './Not Found/not-found.component';
 import { AuthGuard } from '../app/core/guards/auth.guard'
 
@@ -29,7 +28,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./account/account.module').then((m) => m.AccountModule),
   },
-  { path: 'ticket', component: TicketsComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];

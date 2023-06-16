@@ -4,17 +4,17 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events.component';
 
-import { CardDetailsComponent } from './Components/card-details/card-details.component';
 import { EventDetailsComponent } from './Components/event-details/event-details.component';
 import { EventScheduleComponent } from './Components/event-schedule/event-schedule.component';
 import { EventsRoutingModule } from './events-routing.module';
+import { EventTicketComponent } from './Components/event-ticket/event-ticket.component';
 
 @NgModule({
   declarations: [
     EventsComponent,
-    CardDetailsComponent,
     EventDetailsComponent,
     EventScheduleComponent,
+    EventTicketComponent,
   ],
   imports: [CommonModule, RouterModule, FormsModule, EventsRoutingModule],
 })
