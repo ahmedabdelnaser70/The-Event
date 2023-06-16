@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import ValidateForm from 'src/app/helpers/validationform';
 import { AuthService } from '../Services/auth.service';
->>>>>>> zeinabElazab
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-<<<<<<< HEAD
-export class RegisterComponent {
-=======
 export class RegisterComponent implements OnInit {
   public signUpForm!: FormGroup;
   type: string = 'password';
@@ -63,6 +56,5 @@ export class RegisterComponent implements OnInit {
       ValidateForm.validateAllFormFields(this.signUpForm); //{7}
     }
   }
->>>>>>> zeinabElazab
 
 }

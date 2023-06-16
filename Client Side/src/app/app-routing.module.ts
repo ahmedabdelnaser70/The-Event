@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { EventsComponent } from './events/events.component';
 import { NotFoundComponent } from './Not Found/not-found.component';
-import { AuthGuard } from '../app/core/guards/auth.guard'
+import { AuthGuard } from '../app/core/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },

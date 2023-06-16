@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,17 +5,13 @@ import { NgToastService } from 'ng-angular-popup';
 import { AuthService } from '../Services/auth.service';
 import { UserStoreService } from '../Services/user-store.service';
 import ValidateForm from '../../helpers/validationform';
->>>>>>> zeinabElazab
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-<<<<<<< HEAD
-export class LoginComponent {
 
-=======
 export class LoginComponent implements OnInit{
   public loginForm!: FormGroup; 
   type: string = 'password';
@@ -68,5 +61,4 @@ export class LoginComponent implements OnInit{
       ValidateForm.validateAllFormFields(this.loginForm);
     }
   }
->>>>>>> zeinabElazab
 }
