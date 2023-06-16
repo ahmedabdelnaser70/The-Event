@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-
+import { NgToastModule } from 'ng-angular-popup';
 import { CoreModule } from './core/core.module';
 import { EventsModule } from './events/events.module';
 import { GalleryModule } from './Gallery/gallery.module';
@@ -15,6 +15,9 @@ import { SponsersModule } from './Sponsers/sponsers.module';
 import { VenueModule } from './Venue/venue.module';
 import { TicketsModule } from './Tickets/tickets.module';
 import { NotFoundComponent } from './Not Found/not-found.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { AccountModule } from './account/account.module';
 
 
 @NgModule({
@@ -33,8 +36,14 @@ import { NotFoundComponent } from './Not Found/not-found.component';
     SponsersModule,
     VenueModule,
     TicketsModule,
+    NgToastModule,
+    AccountModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

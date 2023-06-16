@@ -5,6 +5,7 @@ import { HomeComponent } from './Home/home.component';
 import { EventsComponent } from './events/events.component';
 import { TicketsComponent } from './Tickets/tickets.component';
 import { NotFoundComponent } from './Not Found/not-found.component';
+import { AuthGuard } from '../app/core/guards/auth.guard'
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,11 @@ const routes: Routes = [
     path: 'sponser',
     loadChildren: () =>
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
+  },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./account/account.module').then((m) => m.AccountModule),
   },
   { path: 'ticket', component: TicketsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
