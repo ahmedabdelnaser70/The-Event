@@ -35,7 +35,7 @@ body {
   top: 0;
   right: 0;
   border-top: 20px solid #f7f4f4;
-  border-left: 20px solid #dd3f3e;
+  border-left: 20px solid #090909;
   width: 0;
 }
 .stub:after {
@@ -44,7 +44,7 @@ body {
   bottom: 0;
   right: 0;
   border-bottom: 20px solid #f7f4f4;
-  border-left: 20px solid #ef5658;
+  border-left: 20px solid #222121;
   width: 0;
 }
 .stub .top {
@@ -102,7 +102,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 20px solid #dd3f3e;
+  border-top: 20px solid #eae5e5;
   border-right: 20px solid #fff;
   width: 0;
 }
@@ -111,7 +111,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  border-bottom: 20px solid #dd3f3e;
+  border-bottom: 20px solid #f5f2f2;
   border-right: 20px solid #fff;
   width: 0;
 }
@@ -124,7 +124,6 @@ body {
   position: absolute;
   top: 50px;
   right: 50px;
-  color: #ef5658;
   font-size: 40px;
 }
 .check .info {
@@ -143,7 +142,7 @@ body {
 }
 .check .info section:before {
   content: "";
-  background: #ef5658;
+  background: black;
   display: block;
   width: 40px;
   height: 3px;

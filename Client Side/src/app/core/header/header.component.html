@@ -53,7 +53,9 @@
     <a class="buy-tickets scrollto" [routerLink]="['/shoppingcart']">
       <span></span>
       <span><i class="fas fa-shopping-cart"></i></span>
-      <span class="badge badge-pill bg-danger">0</span>
+      <span class="badge badge-pill bg-danger">
+      {{cartTicketsNumber}}
+      </span>
     </a>
     <a class="buy-tickets scrollto" href="">Login</a>
   </div>

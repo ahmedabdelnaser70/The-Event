@@ -16,6 +16,8 @@ import { VenueModule } from './Venue/venue.module';
 
 import { NotFoundComponent } from './Not Found/not-found.component';
 import { ShopingCartModule } from './shoping-cart/shopping-cart.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -32,9 +34,10 @@ import { ShopingCartModule } from './shoping-cart/shopping-cart.module';
     SpeakersModule,
     SponsersModule,
     VenueModule,
-    ShopingCartModule,
+  
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

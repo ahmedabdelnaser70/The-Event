@@ -7,7 +7,7 @@ import { EventTicketComponent } from './Components/event-ticket/event-ticket.com
 
 const routes: Routes = [
   { path: '', component: EventsComponent },
-  { path: 'ticket', component: EventTicketComponent },
+  { path: 'ticket/:id', component: EventTicketComponent },
   { path: 'details', component: EventDetailsComponent },
 ];
 
