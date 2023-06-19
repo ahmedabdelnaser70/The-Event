@@ -2,6 +2,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from './layout/app.layout.component';
+import { EventComponent } from './demo/components/event/event.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,12 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                   (m) => m.DashboardModule
                 ),
             },
+            //-------------------------------------------------
+            {
+              path: 'event',
+              component: EventComponent,
+            },
+            //-------------------------------------------------
             {
               path: 'uikit',
               loadChildren: () =>
