@@ -28,6 +28,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./account/account.module').then((m) => m.AccountModule),
   },
+  {
+    path: 'shoppingcart',
+    loadChildren: () =>
+      import('./shoping-cart/shopping-cart.module').then((m) => m.ShopingCartModule),
+  },
+
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },

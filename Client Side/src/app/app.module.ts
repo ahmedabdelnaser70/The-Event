@@ -4,8 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { NgToastModule } from 'ng-angular-popup';
-import { HttpClientModule } from '@angular/common/http';
+//import { NgToastModule } from 'ng-angular-popup';
 import { CoreModule } from './core/core.module';
 import { EventsModule } from './events/events.module';
 import { GalleryModule } from './Gallery/gallery.module';
@@ -33,21 +32,21 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     HomeModule,
     SpeakersModule,
     SponsersModule,
-    VenueModule,
+    //  
   
     HttpClientModule
   ],
-  providers: [HttpClientModule],
-    NgToastModule,
+  providers: [HttpClientModule,
+    // NgToastModule,
     AccountModule,
     ShopingCartModule,
     HttpClientModule,
   ],
-  providers: [{
-    provide:HTTP_INTERCEPTORS,
-    useClass:TokenInterceptor,
-    multi:true
-  }],
+  // providers: [{
+  //   provide:HTTP_INTERCEPTORS,
+  //   useClass:TokenInterceptor,
+  //   multi:true
+  // }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
