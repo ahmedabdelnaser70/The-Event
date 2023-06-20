@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { EventsComponent } from './events/events.component';
-
 import { NotFoundComponent } from './Not Found/not-found.component';
+import { AuthGuard } from '../app/core/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,12 +24,11 @@ const routes: Routes = [
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
   },
   {
-    path: 'shoppingcart',
+    path: 'account',
     loadChildren: () =>
-      import('./shoping-cart/shopping-cart.module').then(
-        (m) => m.ShopingCartModule
-      ),
+      import('./account/account.module').then((m) => m.AccountModule),
   },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
