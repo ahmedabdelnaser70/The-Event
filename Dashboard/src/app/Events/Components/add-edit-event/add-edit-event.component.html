@@ -1,0 +1,97 @@
+<div mat-dialog-title>Event Form</div>
+<div mat-dialog-content class="content">
+  <form [formGroup]="eventForm" (ngSubmit)="onFormSubmit()">
+    <!----------- Event Name  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Event Name</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="eventName"
+          placeholder="EX: Concert"
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Event Description  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Event Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Ex. more details about Event ..."
+          formControlName="Description"
+          cols="10"
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <!----------- Event Date  ------------->
+    <div class="roww">
+      <mat-form-field color="accent">
+        <mat-label>Date From</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="DateFrom" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker1"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field color="accent">
+        <mat-label>Date To</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="DateTo" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker2"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <!----------- Event Image  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Choose image</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="image"
+          placeholder="Ex: .svg/.jpg/.png....."
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Event Speaker & Sponser  ------------->
+    <div class="roww">
+      <mat-form-field appearance="outline">
+        <mat-label>Select Speaker</mat-label>
+        <mat-select formControlName="speakers" multiple>
+          <mat-option>dd</mat-option>
+          <mat-option>dd</mat-option>
+          <!-- <mat-option *ngFor="let item of speakers" [value]="item.id">
+            {{ item.speakerName }}
+          </mat-option> -->
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Select Sponser</mat-label>
+        <mat-select formControlName="sponsers" multiple>
+          <mat-option>ee</mat-option>
+          <mat-option>ee</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!--------------- action buttons ----------->
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="warn" (click)="close()">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>
