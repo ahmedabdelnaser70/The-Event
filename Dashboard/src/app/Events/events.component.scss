@@ -1,0 +1,46 @@
+.example-spacer {
+  flex: 1 1;
+}
+
+// mat-table mat-header-cell {
+//   background-color: #2f3244;
+//   color: white;
+// }
+// mat-cell {
+//   background-color: #f1f4f6;
+//   color: rgb(44, 39, 39);
+// }
+
+.mat-toolbar,
+.mat-mdc-paginator {
+  background-color: #31365c;
+  color: white;
+}
+
+table {
+  th {
+    background-color: #31365c;
+    color: white;
+    // font-weight: bolder;
+    user-select: none;
+  }
+  td {
+    background-color: #f1f4f6;
+  }
+}
+table td:hover {
+  background-color: #e1dada;
+}
+
+// .mat-mdc-raised-button.mat-unthemed {
+//   --mdc-protected-button-container-color: white;
+//   --mdc-protected-button-label-text-color: #207bb4;
+// }
+
+// .mat-mdc-raised-button:hover {
+//   --mdc-protected-button-container-color: rgb(240, 240, 240);
+// }
+
+.mat-mdc-form-field-type-mat-input {
+  width: 100%;
+}
