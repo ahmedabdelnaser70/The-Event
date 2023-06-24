@@ -5,75 +5,7 @@ body {
   font-weight: 300;
   background-color: #041221;
 }
-.hero.is-success {
-  background: #041221;
-}
-.hero .nav,
-.hero.is-success .nav {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.box {
-  margin-top: 5rem;
-}
-.avatar {
-  margin-top: -70px;
-  padding-bottom: 20px;
-}
-.avatar img {
-  padding: 5px;
-  background: #fff;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1),
-    0 0 0 1px rgba(10, 10, 10, 0.1);
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-input {
-  font-weight: 300;
-}
-p {
-  font-weight: 700;
-}
-p.subtitle {
-  padding-top: 1rem;
-}
 
-.login-hr {
-  border-bottom: 1px solid white;
-}
-
-.has-text-black {
-  color: black;
-}
-
-.field {
-  padding-bottom: 10px;
-}
-
-.fa {
-  margin-left: 5px;
-}
-
-body {
-  background: #041221;
-}
-/* Card start*/
-.card {
-  overflow: hidden;
-}
-.card.large {
-  height: 600px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: initial;
-  border-radius: 5px;
-}
-/* Card end */
-.media-content {
-  overflow: hidden;
-}
-.title.no-padding {
-  margin-bottom: 0 !important;
-}
 #flow span {
   display: block;
   width: 200vw;
@@ -149,46 +81,14 @@ body {
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
-.footer {
-  background-color: #222831;
-  color: lemonchiffon;
-}
-.footer p,
-strong {
-  color: lemonchiffon;
-}
-.footer a:hover {
-  color: crimson;
-}
-.fa {
-  color: lemonchiffon;
-  margin: 10px;
-}
-
-::selection {
-  background-color: #def4ff;
-}
-
-.login-error {
-  color: red;
-  font-weight: lighter;
-}
-#txt {
-  color: #041221;
-}
-
-.fr {
-  display: block;
-  float: right;
-}
 
 .outer {
+  width: 100%;
   height: 100vh;
-  background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+  z-index: 3;
+  position: relative;
 }
-.outer {
-  background: #fff;
-}
+
 .panel-heading {
   text-align: center;
   margin-bottom: 10px;
@@ -213,12 +113,12 @@ a:hover {
 
 .btn {
   margin-top: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
+  background-color: #00d1b2;
 }
 
 .panel {
   min-height: 380px;
-  box-shadow: 20px 20px 80px rgb(218, 218, 218);
   border-radius: 12px;
   margin-top: 100px;
 }
@@ -230,7 +130,7 @@ a:hover {
   align-items: center;
   cursor: pointer;
   border: 1px solid #ddd;
-  color: #4343ff;
+  color: #00d1b2;
 }
 
 .input-field.error {
@@ -259,11 +159,6 @@ img {
   border-radius: 50%;
   position: relative;
 }
-
-/* a[target='_blank'] {
-  position: relative;
-  transition: all 0.1s ease-in-out
-} */
 
 .bordert {
   border-top: 1px solid #aaa;
