@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+// import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-speakers',
-  templateUrl: './speakers.component.html',
-  styleUrls: ['./speakers.component.scss']
-})
+// @Component({
+//   selector: 'app-speakers',
+//   templateUrl: './speakers.component.html',
+//   styleUrls: ['./speakers.component.scss']
+// })
 export class SpeakersComponent {
 
 }
