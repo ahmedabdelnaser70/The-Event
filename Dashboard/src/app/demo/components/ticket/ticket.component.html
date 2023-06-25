@@ -1,0 +1,116 @@
+<!-- <div class="grid">
+    <div class="col-12">
+      <div class="card px-6 py-6">
+        <p-toast></p-toast>
+        <p-toolbar styleClass="mb-4">
+          <ng-template pTemplate="left">
+            <div class="my-2">
+              <button
+                pButton
+                pRipple
+                label="New"
+                icon="pi pi-plus"
+                class="p-button-success mr-2"
+                (click)="AddNewTicket()"
+              ></button>
+              <button
+                pButton
+                pRipple
+                label="Delete"
+                icon="pi pi-trash"
+                class="p-button-danger"
+                (click)="deleteSelectedTicket()"
+                [disabled]="!SelectedTickets || !SelectedTickets.length"
+              ></button>
+            </div>
+          </ng-template>
+  
+          <ng-template pTemplate="right">
+            <p-fileUpload
+              mode="basic"
+              accept="image/*"
+              [maxFileSize]="1000000"
+              label="Import"
+              chooseLabel="Import"
+              class="mr-2 inline-block"
+            ></p-fileUpload>
+            <button
+              pButton
+              pRipple
+              label="Export"
+              icon="pi pi-upload"
+              class="p-button-help"
+              (click)="dt.exportCSV()"
+            ></button> -->
+          <!-- </ng-template>
+        </p-toolbar>
+  
+        <p-table
+        >
+          <ng-template pTemplate="caption">
+            <div
+              class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+            >
+              <h5 class="m-0">Manage Tickets</h5>
+              <span class="block mt-2 md:mt-0 p-input-icon-left">
+                <i class="pi pi-search"></i> -->
+                <!-- <input
+                  pInputText
+                  type="text"
+                  (input)="onGlobalFilter(dt, $event)"
+                  placeholder="Search..."
+                  class="w-full sm:w-auto"
+                /> -->
+              <!-- </span>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th style="width: 3rem">
+                
+              </th>
+              <th pSortableColumn="type">
+                Ticket Type 
+              </th>
+              <th pSortableColumn="price">
+                Ticket Price 
+              </th>
+              <th pSortableColumn="Quantity">
+                Avaliable Quantity 
+              <th pSortableColumn="eventName">
+                Event Name 
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-ticket>
+            <tr>
+              <td>
+            
+              </td>
+              <td style="width: 14%; min-width: 10rem">
+                <span class="p-column-title">Ticket Type</span>
+                {{ ticket.ticketType}}
+              </td>
+              <td style="width: 14%; min-width: 10rem">
+                <span class="p-column-title">Price</span>
+                {{ ticket.ticketPrice }}$
+              </td>
+              <td style="width: 14%; min-width: 10rem">
+                <span class="p-column-title">Quantity</span>
+                {{ticket.ticketQuentity }}
+              </td>
+              <td style="width: 14%; min-width: 10rem">
+                <span class="p-column-title">eventName</span>
+                {{ticket.eventName}}
+              </td>
+               
+              <td>
+                <div class="flex">
+                 
+                </div>
+              </td>
+            </tr> 
+          </ng-template>
+        </p-table>
+      </div>  -->
+  

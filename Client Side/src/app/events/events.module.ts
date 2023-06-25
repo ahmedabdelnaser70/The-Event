@@ -8,6 +8,7 @@ import { EventDetailsComponent } from './Components/event-details/event-details.
 import { EventScheduleComponent } from './Components/event-schedule/event-schedule.component';
 import { EventsRoutingModule } from './events-routing.module';
 import { EventTicketComponent } from './Components/event-ticket/event-ticket.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EventTicketComponent } from './Components/event-ticket/event-ticket.com
     EventScheduleComponent,
     EventTicketComponent,
   ],
-  imports: [CommonModule, RouterModule, FormsModule, EventsRoutingModule],
+  imports: [CommonModule, RouterModule, FormsModule, EventsRoutingModule, MatDialogModule],
+  providers:[ {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}]
 })
 export class EventsModule {}

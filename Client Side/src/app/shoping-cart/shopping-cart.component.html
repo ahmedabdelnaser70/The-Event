@@ -1,89 +1,22 @@
-<section class="h-100 h-custom" style="background-color: #eee">
-  <div class="container py-5 h-100 overflow-auto p-3 bg-light">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col">
-        <div class="card">
-          <div class="card-body p-4">
-            <div class="row">
-              <div class="col-lg-7">
-                <h5 class="mb-3">
-                  <a href="#!" class="text-body"
-                    ><i class="fas fa-long-arrow-alt-left me-2"></i>Continue
-                    shopping</a
-                  >
-                </h5>
-                <hr />
 
-                <div
-                  class="d-flex justify-content-between align-items-center mb-4"
-                >
-                  <div>
-                    <p class="mb-1">Shopping cart</p>
-                    <p class="mb-0">You have {{UserPurcheaseList.length}} items in your cart</p>
-                  </div>
-                </div>
-                <div class="card mb-3" *ngFor="let item of UserPurcheaseList">
-                  <div class="card-body">
-                    <section class="date">
-                      <time datetime="23th feb">
-                        <span>{{item.ticketType}}</span><span>Access</span>
-                      </time>
-                    </section>
-                    <section class="card-cont">
-                      <h3>live in sydney</h3>
-                      <div class="even-date">
-                        <i class="fa fa-calendar"></i>
-                        <time>
-                          <span>Event Date</span>
-                          <span>{{item.purchaseDate}}</span>
-                        </time>
-                      </div>
-                      <div class="even-info">
-                        <i class="fa fa-map-marker"></i>
-                        <p>Price:{{item.ticketPrice}}$</p>
-                       
-                      </div>
-
-                      <a href="#" (click)="unbooKTicket(item.id,item.ticketId)">UNBOOk</a>
-                    </section>
-                  </div>
-                </div>
-
-                <div class="card mb-3 mb-lg-0 mt-4"></div>
-              </div>
-              
-              <div class="col-lg-5" style="margin-top: 95px;">
-                <div class="card bg-primary text-white rounded-3">
+              <div class="col-lg-5" style="width: 100%;height: 100%;">
+                <div class=>
                   <div class="card-body">
                     <div
                       class="d-flex justify-content-between align-items-center mb-4"
                     >
-                      <h5 class="mb-0">Card details</h5>
                     </div>
-
-                    <p class="small mb-2">Card type</p>
-
-                    <a href="#!" type="submit" class="text-white"
-                      ><i class="fab fa-cc-visa fa-2x me-2"></i
-                    ></a>
-
-                    <a href="#!" type="submit" class="text-white"
-                      ><i class="fab fa-cc-paypal fa-2x"></i
-                    ></a>
-
+                    <div class="card-body">
+                      
+                      <p><strong>We accept</strong></p>
+                      <a href="#!" type="submit" class="text-white" style="color: red;"
+                      ><i class="fab fa-cc-paypal fa-2x" style="color: red;"></i>
+                      </a>
+                  </div>
                     <form class="mt-4">
-                      <div class="form-outline form-white mb-4">
-                        <label class="form-label" for="typeName"
-                          >Cardholder's Name</label
-                        >
-                        <input
-                          type="text"
-                          id="typeName"
-                          class="form-control form-control-lg"
-                          siez="17"
-                          placeholder="Cardholder's Name"
-                        />
-                      </div>
+                     
+                      
+                      
 
                       <div class="form-outline form-white mb-4">
                         <label class="form-label" for="typeText"
@@ -99,44 +32,59 @@
                           maxlength="19"
                         />
                       </div>
-
+                      <div class="form-outline form-white mb-4">
+                        <label class="form-label" for="typeName" 
+                          >Ticket Type</label
+                        >
+                        <input
+                          type="text"
+                          id="typeName"
+                          class="form-control form-control-lg"
+                          siez="17"
+                          readonly 
+                          style="background-color: white;"
+                          value="{{this.data.ticket.ticketType}} Access Ticket"
+                        />
+                        </div>
                     </form>
 
-                    <hr class="my-4" />
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Subtotal</p>
-                      <p class="mb-2">${{Total}}</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Shipping</p>
-                      <p class="mb-2">$0.00</p>
-                    </div>
+                    <hr class="my-4"  style="color: red; size: 3px;"/>
 
                     <div class="d-flex justify-content-between mb-4">
-                      <p class="mb-2">Total(Incl. taxes)</p>
-                      <p class="mb-2">{{Total}}$</p>
+                      <p class="mb-2"
+                    
+                     style="font-weight: bold;"
+                      >Ticket Price:-</p>
+                      <p class="mb-2" style="font-weight: bold;color: red;">{{this.data.ticket.ticketPrice}}$</p>
                     </div>
+                  
+                    
 
                     <button
                       type="button"
                       class="btn btn-info btn-block"
                       style="
-                        background-color: white;
+                        background-color: rgb(243, 38, 38);
                         border: 6px;
                         text-decoration-color: red;
                       "
+                      (click)="buyNow()"
                     >
-                      CHECKOUT
+                      Buy Now
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info btn-block"
+                      style="
+                        background-color: rgb(206, 197, 197);
+                        border: 6px;
+                        text-decoration-color: rgb(201, 195, 195);
+                      "
+                      (click)="cancel()"
+                    >
+                      Cancel
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+

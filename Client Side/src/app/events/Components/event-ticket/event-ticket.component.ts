@@ -5,7 +5,9 @@ import { TicketPurchease } from 'src/app/shoping-cart/Model/TicketPurcheaseModel
 import { CartserviseService } from 'src/app/shoping-cart/Services/cartservise.service';
 import { Component,Inject } from '@angular/core';
 import { CartService } from 'src/app/shoping-cart/Services/cartcount.service';
+import { MatDialog } from '@angular/material/dialog';
 import { Observable, Subject } from 'rxjs';
+import { ShoppingCartComponent } from 'src/app/shoping-cart/shopping-cart.component';
 @Component({
   selector: 'app-event-ticket',
   templateUrl: './event-ticket.component.html',
@@ -16,13 +18,13 @@ export class EventTicketComponent {
   proTicket:Ticket=new Ticket(0,"",0,0,"",0,"","","","")
   BasicTicket:Ticket=new Ticket(0,"",0,0,"",0,"","","","")
   eventTickets:any
-  ticketPurchase:TicketPurchease=new TicketPurchease(0,"","","","","",0,"")
   
    constructor(
     @ Inject(CartService) public cartCount:CartService,
      public ticketService:TicketService,
     public activatatedRoute:ActivatedRoute,
     @Inject(CartserviseService)public ticketPurchaseSercvice:CartserviseService,
+    @Inject(MatDialog) public dialog:MatDialog
   ){
     
       
@@ -49,7 +51,6 @@ export class EventTicketComponent {
                this.proTicket=ticket
               }
             });
-            console.log(d);
           }
         )
       }
@@ -58,36 +59,41 @@ export class EventTicketComponent {
    }
    bookTicket(ticket:Ticket)
    {
-   
-       ticket.ticketQuentity=ticket.ticketQuentity-1
-       this.ticketPurchase.purchaseDate=new Date().toISOString();
-       console.log(Date.now())
-       this.ticketPurchase.ticketId=ticket.ticketId
-       this.ticketPurchase.userId=1
-       this.ticketPurchaseSercvice.postTicketPurchease(this.ticketPurchase).subscribe(
-        TP=>
-        {
-          console.log(TP)
-          this.ticketService.updateTicket(ticket.ticketId,ticket).subscribe(
-            d=>{
-              if(ticket.ticketType=="VIP")
-              {
-                this.vipTicket=d
-              }
-              if(ticket.ticketType=="Basic")
-              {
-                this.BasicTicket=d
-              }
-              if(ticket.ticketType=="Pro")
-              {
-                this.proTicket=d
-              }
-            }
-           )
-        }
-       )
+    this.dialog.open(ShoppingCartComponent,{
+       width:'35%',
+       height:'50%'
+       ,data:{ticket:ticket}
+      
+     
+    })
+      //  this.ticketPurchase.purchaseDate=new Date().toISOString();
+      //  console.log(Date.now())
+      //  this.ticketPurchase.ticketId=ticket.ticketId
+      //  this.ticketPurchase.userId=1
+      //  this.ticketPurchaseSercvice.postTicketPurchease(this.ticketPurchase).subscribe(
+      //   TP=>
+      //   {
+      //     console.log(TP)
+      //     this.ticketService.updateTicket(ticket.ticketId,ticket).subscribe(
+      //       d=>{
+      //         if(ticket.ticketType=="VIP")
+      //         {
+      //           this.vipTicket=d
+      //         }
+      //         if(ticket.ticketType=="Basic")
+      //         {
+      //           this.BasicTicket=d
+      //         }
+      //         if(ticket.ticketType=="Pro")
+      //         {
+      //           this.proTicket=d
+      //         }
+      //       }
+      //      )
+      //   }
+      //  )
           
-       this.cartCount.setCartCount(parseInt(localStorage.getItem("cart_count") ||"0")+1)
+      //  this.cartCount.setCartCount(parseInt(localStorage.getItem("cart_count") ||"0")+1)
 
    }
  

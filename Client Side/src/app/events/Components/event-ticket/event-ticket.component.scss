@@ -74,6 +74,7 @@ body {
   position: absolute;
   left: 40px;
   font-size: 100px;
+  margin-top: 60px;
 }
 .stub .invite {
   position: absolute;
@@ -151,4 +152,11 @@ body {
 .check .info section .title {
   font-size: 10px;
   text-transform: uppercase;
+}
+
+.custom-modalbox
+{
+  border-radius:5%;
+  border-color: #dd3f3e;
+  background-color: blue;
 }

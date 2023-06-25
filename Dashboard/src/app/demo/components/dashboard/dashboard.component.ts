@@ -4,7 +4,7 @@ import { Product } from '../../api/product';
 import { ProductService } from '../../service/product.service';
 
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
-import { Subscription } from 'rxjs-compat';
+import { Subscription } from 'rxjs';
 
 @Component({
     templateUrl: './dashboard.component.html',

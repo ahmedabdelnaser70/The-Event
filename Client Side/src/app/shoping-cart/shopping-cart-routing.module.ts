@@ -4,10 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ShoppingCartComponent } from './shopping-cart.component';
 
+
 const routes: Routes = [{ path: '', component: ShoppingCartComponent }];
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, RouterModule.forChild(routes)],
+
 })
 export class ShoppingCartRoutingModule {}
