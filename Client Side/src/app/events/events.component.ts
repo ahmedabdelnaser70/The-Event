@@ -14,12 +14,12 @@ export class EventsComponent {
     activatedRoute: ActivatedRoute
   ) {}
 
-  event!: EventModel[];
+  events!: EventModel[];
 
   ngOnInit() {
     this.eventService.getAll().subscribe((data) => {
       console.log(data);
-      this.event = data;
+      this.events = data;
     });
   }
 }
