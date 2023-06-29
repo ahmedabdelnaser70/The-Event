@@ -14,8 +14,9 @@
     </div>
 
     <div class="row">
+     
       <div class="ticket">
-        <div class="stub">
+        <div class="stub" style="background-color:#F49D1A;">
           <div class="top">
             <span class="admit">Admit</span>
             <span class="line"></span>
@@ -24,204 +25,157 @@
               <span>31415926</span>
             </span>
           </div>
-          <div class="number">70</div>
+
+        <div class="number">{{vipTicket.ticketQuentity}}</div>
           <div class="invite">
             <div
               class="text-center"
               style="
                 display: inline-flexbox;
-                -webkit-text-fill-color: rgb(210, 79, 79);
+                -webkit-text-fill-color: #F49D1A;
               "
             >
               <button
+                [disabled]="vipTicket.ticketQuentity==0?true:false"
                 style="background-color: white; border: 6px"
                 type="button"
                 class="btn"
-              >
+                (click)="bookTicket(vipTicket)">
+              
                 BOOK IT
               </button>
             </div>
           </div>
         </div>
         <div class="check">
+          <div class="big" style="color: #F49D1A;">
+            VIP <br />
+            Access
+          </div>
+          <div class="number" style="color: #F49D1A;">{{vipTicket.ticketPrice}}$</div>
+
+          <div class="info">
+            <section>
+              <div class="title" style="color: #F49D1A;">Regular</div>
+              <div class="title" style="color: #F49D1A;">Seating</div>
+            </section>
+            <section>
+              <div class="title" style="color: #F49D1A;">Coffee</div>
+              <div class="title" style="color: #F49D1A;">BreaK</div>
+            </section>
+            <section>
+              <div class="title" style="color: #F49D1A;">Custom</div>
+              <div class="title" style="color: #F49D1A;">Badge</div>
+            </section>
+            <section>
+              <div class="title" style="color: #F49D1A;">After</div>
+              <div class="title" style="color: #F49D1A;">Party</div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="stub" style="background-color: #1D267D;">
+          <div class="top">
+            <span class="admit">Admit</span>
+            <span class="line"></span>
+            <span class="num">
+              Invitation
+              <span>31415926</span>
+            </span>
+          </div>
+          <div class="number">{{proTicket.ticketQuentity}}</div>
+          <div class="invite">
+            <div
+              class="text-center"
+              style="
+                display: inline-flexbox;
+                -webkit-text-fill-color: #1D267D; 
+              "
+            >
+              <button
+              [disabled]="proTicket.ticketQuentity==0?true:false"
+                style="background-color: white; border: 6px"
+                type="button"
+                class="btn"
+               (click)="bookTicket(proTicket)">
+                BOOK IT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="check">
+          <div class="big" style="color: #1D267D;">
+            Pro <br />
+            Access
+          </div>
+          <div class="number" style="color: #1D267D;">{{proTicket.ticketPrice}}$</div>
+
+          <div class="info"  >
+            <section >
+              <div class="title" style="color: #1D267D;">Regular</div>
+              <div class="title" style="color: #1D267D;">Seating</div>
+            </section>
+            <section>
+              <div class="title" style="color: #1D267D;">Coffee</div>
+              <div class="title" style="color: #1D267D;">BreaK</div>
+            </section>
+            <section>
+              <div class="title" style="color:#1D267D">Custom</div>
+              <div class="title" style="color: #1D267D;">Badge</div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="stub" style="background-color :#8B1874     ;">
+          <div class="top">
+            <span class="admit">Admit</span>
+            <span class="line"></span>
+            <span class="num">
+              Invitation
+              <span>31415926</span>
+            </span>
+          </div>
+          <div class="number">{{BasicTicket.ticketQuentity}}</div>
+          <div class="invite">
+            <div
+              class="text-center"
+              style="
+                display: inline-flexbox;
+                -webkit-text-fill-color: #8B1874;
+              "
+            >
+              <button
+              [disabled]="BasicTicket.ticketQuentity==0?true:false"
+                style="background-color: white; border: 6px"
+                type="button"
+                class="btn"
+                (click)="bookTicket(BasicTicket)">
+              
+                BOOK IT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="check" style="color:#8B1874        ;">
           <div class="big">
             Basic <br />
             Access
           </div>
-          <div class="number">150$</div>
+          <div class="number" style="color: #8B1874         ;">{{BasicTicket.ticketPrice}}$</div>
 
-          <div class="info">
+          <div class="info" >
             <section>
-              <div class="title">Regular</div>
-              <div class="title">Seating</div>
+              <div class="title" style="color: #8B1874;">Regular</div>
+              <div class="title" style="color: #8B1874;">Seating</div>
             </section>
             <section>
-              <div class="title">Coffee</div>
-              <div class="title">BreaK</div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div class="ticket">
-        <div class="stub">
-          <div class="top">
-            <span class="admit">Admit</span>
-            <span class="line"></span>
-            <span class="num">
-              Invitation
-              <span>31415926</span>
-            </span>
-          </div>
-          <div class="number">50</div>
-          <div class="invite">
-            <div
-              class="text-center"
-              style="
-                display: inline-flexbox;
-                -webkit-text-fill-color: rgb(210, 79, 79);
-              "
-            >
-              <button
-                style="background-color: white; border: 6px"
-                type="button"
-                class="btn"
-              >
-                BOOK IT
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="check">
-          <div class="big">
-            Pro <br />
-            Access
-          </div>
-          <div class="number">200$</div>
-
-          <div class="info">
-            <section>
-              <div class="title">Regular</div>
-              <div class="title">Seating</div>
-            </section>
-            <section>
-              <div class="title">Coffee</div>
-              <div class="title">BreaK</div>
-            </section>
-            <section>
-              <div class="title">Custom</div>
-              <div class="title">Badge</div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div class="ticket">
-        <div class="stub">
-          <div class="top">
-            <span class="admit">Admit</span>
-            <span class="line"></span>
-            <span class="num">
-              Invitation
-              <span>31415926</span>
-            </span>
-          </div>
-          <div class="number">30</div>
-          <div class="invite">
-            <div
-              class="text-center"
-              style="
-                display: inline-flexbox;
-                -webkit-text-fill-color: rgb(210, 79, 79);
-              "
-            >
-              <button
-                style="background-color: white; border: 6px"
-                type="button"
-                class="btn"
-              >
-                BOOK IT
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="check">
-          <div class="big">
-            VIP <br />
-            Access
-          </div>
-          <div class="number">300$</div>
-
-          <div class="info">
-            <section>
-              <div class="title">Regular</div>
-              <div class="title">Seating</div>
-            </section>
-            <section>
-              <div class="title">Coffee</div>
-              <div class="title">BreaK</div>
-            </section>
-            <section>
-              <div class="title">Custom</div>
-              <div class="title">Badge</div>
-            </section>
-            <section>
-              <div class="title">After</div>
-              <div class="title">Party</div>
+              <div class="title" style="color: #8B1874;">Coffee</div>
+              <div class="title" style="color: #8B1874;">BreaK</div>
             </section>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Modal Order Form -->
-  <div id="buy-ticket-modal" class="modal fade">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Buy Tickets</h4>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <form method="POST" action="#">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="your-name"
-                placeholder="Your Name"
-              />
-            </div>
-            <div class="form-group mt-3">
-              <input
-                type="text"
-                class="form-control"
-                name="your-email"
-                placeholder="Your Email"
-              />
-            </div>
-            <div class="form-group mt-3">
-              <select id="ticket-type" name="ticket-type" class="form-select">
-                <option value="">-- Select Your Ticket Type --</option>
-                <option value="standard-access">Standard Access</option>
-                <option value="pro-access">Pro Access</option>
-                <option value="premium-access">Premium Access</option>
-              </select>
-            </div>
-            <div class="text-center mt-3">
-              <button type="submit" class="btn">Buy Now</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-</section>
-<!-- End Buy Ticket Section -->

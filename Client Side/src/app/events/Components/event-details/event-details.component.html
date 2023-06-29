@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="details">
-          <h2>{{ event.eventName }}</h2>
+          <!-- <h2>{{ event.eventName }}</h2> -->
           <div class="social">
             <a href=""><i class="bi bi-twitter"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -57,7 +57,7 @@
     <div class="row m-2">
       <div class="col-5"></div>
       <div class="col-3">
-        <a class="buy-tickets scrollto" [routerLink]="['/event/ticket']"
+        <a class="buy-tickets scrollto" [routerLink]="['/event/ticket/',event.id]"
           ><b>Book Your Ticket</b>
         </a>
       </div>

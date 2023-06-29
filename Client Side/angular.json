@@ -25,7 +25,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "./src/assets/vendor/aos/aos.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/bootstrap-icons/font/bootstrap-icons.scss",
@@ -96,7 +96,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
