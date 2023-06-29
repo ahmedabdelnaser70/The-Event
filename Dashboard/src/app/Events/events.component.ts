@@ -20,7 +20,7 @@ export class EventsComponent implements OnInit {
   ) {}
 
   events: any;
-
+  detailsId = 0;
   displayedColumns: string[] = [
     'id',
     'EventName',
