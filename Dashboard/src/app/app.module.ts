@@ -9,7 +9,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoginModule } from './login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -35,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { EventModule } from './Events/event.module';
+import { AccountModule } from './account/account.module';
 
 @NgModule({
   declarations: [AppComponent, OutlineComponent],
@@ -47,7 +47,6 @@ import { EventModule } from './Events/event.module';
     RouterModule,
     CommonModule,
     HttpClientModule,
-    LoginModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
@@ -70,6 +69,7 @@ import { EventModule } from './Events/event.module';
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
+    AccountModule
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
 })
