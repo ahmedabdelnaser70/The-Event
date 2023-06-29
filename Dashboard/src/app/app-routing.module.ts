@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './account/login/login.component';
 import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
 import { SponserComponent } from './sponsers/sponser/sponser.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'account', pathMatch: 'full' },
+  // { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'events', component: EventsComponent },
+  // { path: 'login', component: LoginComponent },
+  
   { path: 'speakers', component: SpeakersComponent },
   { path: 'sponsers', component:  SponserComponent},
   {
@@ -19,7 +22,7 @@ const routes: Routes = [
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },
-
+  { path: '', redirectTo: 'account/login', pathMatch: 'full' },
   // {path: "**", component: DNotFoundComponent},
 ];
 
