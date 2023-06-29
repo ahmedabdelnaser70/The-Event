@@ -8,22 +8,16 @@
 
     <div class="row">
       <div class="col-md-6">
-        <img
-          src="../../../../assets/img/events/1.jpg"
-          alt="Event 1"
-          class="img-fluid"
-        />
-      </div>
-
-      <div class="col-md-6">
         <div class="details">
-          <h2>Brenden Legros</h2>
+          <h2>{{ event.eventName }}</h2>
           <div class="social">
             <a href=""><i class="bi bi-twitter"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
+          <h2>Event Details</h2>
+          <p>{{ event.eventDescription }}</p>
           <p>
             Voluptatem perferendis sed assumenda voluptatibus. Laudantium
             molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias
@@ -43,12 +37,31 @@
             vel quia omnis velit. In qui debitis autem aperiam voluptates unde
             sunt et facilis.
           </p>
+          <h2>Event Speaker</h2>
+          <p>{{ event.speakers }}</p>
+
+          <h2>Event Sponser</h2>
+          <p>{{ event.sponsors }}</p>
+
+          <h2>Event Date</h2>
+          <p>
+            <b>From:</b> <i>{{ event.eventDate | date }}</i> <br />
+            <b>To:</b> <i>{{ event.eventTime | date }}</i>
+          </p>
         </div>
+      </div>
+      <div class="col-md-6">
+        <img [src]="event.eventImage" alt="Event 1" class="img-fluid" />
+      </div>
+    </div>
+    <div class="row m-2">
+      <div class="col-5"></div>
+      <div class="col-3">
+        <a class="buy-tickets scrollto" [routerLink]="['/event/ticket']"
+          ><b>Book Your Ticket</b>
+        </a>
       </div>
     </div>
   </div>
-  <a class="buy-tickets scrollto" [routerLink]="['/event/ticket']"
-    >Book Your Ticket</a
-  >
 </section>
 <app-event-schedule></app-event-schedule>

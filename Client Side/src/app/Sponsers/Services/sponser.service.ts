@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SpeakerModel } from '../Model/speaker-model';
+import { SponserModel } from '../Model/sponser-model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SpeakerService {
+export class SponserService {
   constructor(public http: HttpClient) {}
-  baseurl = 'https://localhost:7106/api/Speaker/';
+  baseurl = 'https://localhost:7106/api/Sponsor/';
 
   //Get all events
   getAll() {
-    return this.http.get<SpeakerModel[]>(this.baseurl);
+    return this.http.get<SponserModel[]>(this.baseurl);
   }
 
   // Get Event by id
   getById(id: number) {
-    return this.http.get<SpeakerModel>(this.baseurl + id);
+    return this.http.get<SponserModel>(this.baseurl + id);
   }
 }
