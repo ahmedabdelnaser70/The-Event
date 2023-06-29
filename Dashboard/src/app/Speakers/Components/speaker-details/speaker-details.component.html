@@ -1,0 +1,12 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ speaker?.speakerName }}</mat-card-title>
+    <mat-card-subtitle>{{ speaker?.events }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="speaker?.speakerImage" />
+  <mat-card-content>
+    <p>
+      {{ speaker?.speakerBio }}
+    </p>
+  </mat-card-content>
+</mat-card>

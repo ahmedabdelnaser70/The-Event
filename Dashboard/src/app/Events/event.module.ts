@@ -19,9 +19,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { EventsComponent } from './events.component';
 import { AddEditEventComponent } from './Components/add-edit-event/add-edit-event.component';
+import { EventDetailsComponent } from './Components/event-details/event-details.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [EventsComponent, AddEditEventComponent],
+  declarations: [EventsComponent, AddEditEventComponent, EventDetailsComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -41,6 +43,7 @@ import { AddEditEventComponent } from './Components/add-edit-event/add-edit-even
     BrowserAnimationsModule,
     RouterModule,
     MatSnackBarModule,
+    MatCardModule,
   ],
 })
 export class EventModule {}

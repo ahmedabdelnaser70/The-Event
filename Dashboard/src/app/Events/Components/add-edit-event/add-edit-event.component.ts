@@ -15,12 +15,11 @@ import {
 export class AddEditEventComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
-    private diaglog: MatDialog,
     private _dialogRef: MatDialogRef<AddEditEventComponent>,
     public eventService: EventService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    this.eventForm = fb.group({
+    this.eventForm = this.fb.group({
       eventName: '',
       eventDescription: '',
       dateFrom: '',
@@ -34,7 +33,6 @@ export class AddEditEventComponent implements OnInit {
   eventForm: FormGroup;
   speakers: any;
   sponsers: any;
-  dialog = this.diaglog;
 
   ngOnInit(): void {
     this.eventForm.patchValue(this.data);
@@ -47,10 +45,6 @@ export class AddEditEventComponent implements OnInit {
     // this.sponserService.getAll().subscribe(data => {
     //   this.sponsers = data;
     // })
-  }
-
-  close() {
-    this.dialog.closeAll();
   }
 
   onFormSubmit() {
