@@ -1,0 +1,53 @@
+<div mat-dialog-title>Speaker Form</div>
+<div mat-dialog-content class="content">
+  <form [formGroup]="speakerForm" (ngSubmit)="onFormSubmit()">
+    <!----------- Speaker Name  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Speaker Name</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="speakerName"
+          placeholder="EX: Ahmed"
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Speaker Bio  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Speaker Bio</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="speakerBio"
+          placeholder="EX: more details about Speaker ..."
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Speaker Image  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Choose image</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="speakerImage"
+          placeholder="Ex: .svg/.jpg/.png....."
+        />
+      </mat-form-field>
+    </div>
+
+    <!--------------- action buttons ----------->
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="warn" [mat-dialog-close]="false">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>

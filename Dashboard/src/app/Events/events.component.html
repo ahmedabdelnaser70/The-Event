@@ -72,6 +72,9 @@
         <button mat-icon-button (click)="remove(row.id)">
           <mat-icon class="text-danger">delete</mat-icon>
         </button>
+        <button mat-icon-button (click)="detailsId = row.id">
+          <mat-icon class="text-warning">info</mat-icon>
+        </button>
       </td>
     </ng-container>
 
@@ -90,4 +93,6 @@
     [pageSizeOptions]="[5, 10, 25, 100]"
     aria-label="Select page of users"
   ></mat-paginator>
+  <hr />
+  <app-event-details [id]="detailsId"></app-event-details>
 </div>

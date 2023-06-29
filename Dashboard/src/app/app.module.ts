@@ -35,6 +35,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { EventModule } from './Events/event.module';
+import { SpeakerModule } from './Speakers/speaker.module';
 
 @NgModule({
   declarations: [AppComponent, OutlineComponent],

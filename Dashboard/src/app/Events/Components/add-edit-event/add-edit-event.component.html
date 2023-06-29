@@ -88,7 +88,7 @@
 
     <!--------------- action buttons ----------->
     <div mat-dialog-actions class="action">
-      <button mat-raised-button color="warn" (click)="close()">Cancel</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="false">Cancel</button>
       <button mat-raised-button color="primary" type="submit">
         {{ data ? "Update" : "Save" }}
       </button>
