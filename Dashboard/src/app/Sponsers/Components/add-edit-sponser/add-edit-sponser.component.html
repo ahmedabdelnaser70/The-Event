@@ -1,0 +1,53 @@
+<div mat-dialog-title>Speaker Form</div>
+<div mat-dialog-content class="content">
+  <form [formGroup]="sponsorForm" (ngSubmit)="onFormSubmit()">
+    <!----------- Sponsor Name  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Sponsor Name</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="sponsorName"
+          placeholder="EX: Ahmed"
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Sponsor Bio  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Sponsor Details</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="sponsorDetails"
+          placeholder="EX: more details about Speaker ..."
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Sponsor Image  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Choose image</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="sponsorLogo"
+          placeholder="Ex: .svg/.jpg/.png....."
+        />
+      </mat-form-field>
+    </div>
+
+    <!--------------- action buttons ----------->
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="warn" [mat-dialog-close]="false">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>
