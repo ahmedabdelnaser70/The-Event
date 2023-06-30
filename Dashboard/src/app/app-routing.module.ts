@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostLoginComponent } from './login/post-login/post-login.component';
 import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
+import { SponsersComponent } from './Sponsers/sponsers.component';
+import { NotFoundComponent } from './NotFound/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -11,13 +13,13 @@ const routes: Routes = [
 
   { path: 'events', component: EventsComponent },
   { path: 'speakers', component: SpeakersComponent },
-  // { path: 'sponsers', component:  },
+  { path: 'sponsers', component: SponsersComponent },
   // { path: 'tickets', component:  },
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },
 
-  // {path: "**", component: DNotFoundComponent},
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

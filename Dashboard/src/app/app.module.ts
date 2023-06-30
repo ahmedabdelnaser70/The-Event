@@ -36,9 +36,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { EventModule } from './Events/event.module';
 import { SpeakerModule } from './Speakers/speaker.module';
+import { SponserModule } from './Sponsers/sponser.module';
+import { NotFoundComponent } from './NotFound/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, OutlineComponent],
+  declarations: [AppComponent, OutlineComponent, NotFoundComponent],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent],
   imports: [
