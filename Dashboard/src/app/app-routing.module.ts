@@ -7,6 +7,7 @@ import { SpeakersComponent } from './Speakers/speakers.component';
 import { UsersComponent } from './users/users/users.component';
 import { SponsersComponent } from './Sponsers/sponsers.component';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   },
    { path: 'users', component:UsersComponent},
   { path: 'sponsers', component: SponsersComponent },
-  // { path: 'tickets', component:  },
+  { path: 'tickets', component: TicketComponent },
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },

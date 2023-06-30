@@ -38,9 +38,10 @@ import { AccountModule } from './account/account.module';
 import { SpeakerModule } from './Speakers/speaker.module';
 import { SponserModule } from './Sponsers/sponser.module';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
-  declarations: [AppComponent, OutlineComponent, NotFoundComponent],
+  declarations: [AppComponent, OutlineComponent, NotFoundComponent, TicketComponent],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent],
   imports: [
