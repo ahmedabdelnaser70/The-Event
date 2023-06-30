@@ -35,6 +35,7 @@ import { ShopingCartModule } from './shoping-cart/shopping-cart.module';
     AccountModule,
     ShopingCartModule,
     HttpClientModule,
+    AccountModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

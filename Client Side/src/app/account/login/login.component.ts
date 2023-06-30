@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgToastService } from 'ng-angular-popup';
+//import { NgToastService } from 'ng-angular-popup';
+//import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../Services/auth.service';
 import { UserStoreService } from '../Services/user-store.service';
 import ValidateForm from '../../helpers/validationform';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ResetPasswordServiceService } from '../Services/reset-password-service.service';
 
 @Component({
   selector: 'app-login',
@@ -18,12 +20,17 @@ export class LoginComponent implements OnInit{
   type: string = 'password';
   isText: boolean = false;
   eyeIcon: string = 'fa-eye-slash';
+  public resetPasswordEmail!:string;
+  public isValidEmail !:Boolean;
+
+
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private toast: NgToastService,
+    //private toast: ToastrService,
     private userStore: UserStoreService,
+    private resetpass:ResetPasswordServiceService
   
   ) {}
 
@@ -51,16 +58,47 @@ export class LoginComponent implements OnInit{
           const tokenPayload = this.auth.decodedToken();
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.userStore.setRoleForStore(tokenPayload.role);
-          this.toast.success({detail:"SUCCESS", summary:res.message, duration: 5000});
-          this.router.navigate(['dashboard'])
+         // this.toast.success("succes");
+          this.router.navigate(['/home'])
         },
         error: (err) => {
-          this.toast.error({detail:"ERROR", summary:"Something when wrong!", duration: 5000});
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
           console.log(err);
         },
       });
     } else {
       ValidateForm.validateAllFormFields(this.loginForm);
+    }
+  }
+  checkValidEmail(event:string){
+    const value = event;
+    const pattern =  /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    this.isValidEmail=pattern.test(value);
+   return this.isValidEmail;
+  }
+
+  confirmToSend(){
+    if(this.checkValidEmail(this.resetPasswordEmail)){
+      console.log(this.resetPasswordEmail);
+    
+      this.resetpass.sendResetPasswordLink(this.resetPasswordEmail).
+      subscribe({
+        next:(res=>{
+         // this.toast.success("success");
+          this.resetPasswordEmail="";
+          const buttonRef = document.getElementById("closebtn");
+          buttonRef?.click();
+
+        }),
+        error:(err)=>{
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
+          console.log(err);
+        }
+      })
     }
   }
 }

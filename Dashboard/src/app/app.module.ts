@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,NO_ERRORS_SCHEMA } from '@angular/core';
 import {
   CommonModule,
   HashLocationStrategy,
@@ -9,7 +9,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoginModule } from './login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -35,13 +34,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { EventModule } from './Events/event.module';
+import { AccountModule } from './account/account.module';
 import { SpeakerModule } from './Speakers/speaker.module';
 import { SponserModule } from './Sponsers/sponser.module';
 import { NotFoundComponent } from './NotFound/not-found.component';
 import { HotelModule } from './Hotels/hotel.module';
+import { TicketComponent } from './ticket/ticket.component';
+import { UsersModule } from './Users/users/users.module';
+
 
 @NgModule({
-  declarations: [AppComponent, OutlineComponent, NotFoundComponent],
+  declarations: [AppComponent, OutlineComponent, NotFoundComponent, TicketComponent],
   providers: [CdkColumnDef],
   bootstrap: [AppComponent],
   imports: [
@@ -51,7 +54,6 @@ import { HotelModule } from './Hotels/hotel.module';
     RouterModule,
     CommonModule,
     HttpClientModule,
-    LoginModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatCardModule,
@@ -75,7 +77,11 @@ import { HotelModule } from './Hotels/hotel.module';
     MatDialogModule,
     MatSnackBarModule,
     HotelModule,
+    UsersModule
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class AppModule {}

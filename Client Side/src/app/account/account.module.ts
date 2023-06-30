@@ -12,11 +12,13 @@ import { MatListModule} from '@angular/material/list';
 import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
+    ResetComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,6 @@ import {MatSnackBar} from '@angular/material/snack-bar';
     MatButtonModule,
     MatIconModule,
     
-
   ]
 })
 export class AccountModule { }

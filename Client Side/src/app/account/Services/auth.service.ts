@@ -24,7 +24,7 @@ export class AuthService {
 
   signOut(){
     localStorage.clear();
-    this.router.navigate(['login'])
+    this.router.navigate(['/account/login'])
   }
 
   storeToken(tokenValue: string){
@@ -62,6 +62,10 @@ export class AuthService {
     return this.userPayload.role;
   }
 
+  getid(){
+    if(this.userPayload)
+    return this.userPayload.id;
+  }
   renewToken(tokenApi : TokenApi){
     return this.http.post<any>(`${this.baseUrl}refresh`, tokenApi)
   }

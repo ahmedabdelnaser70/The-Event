@@ -22,6 +22,7 @@ const routes: Routes = [
     path: 'sponser',
     loadChildren: () =>
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
+      canActivate:[AuthGuard]
   },
   {
     path: 'account',
@@ -29,7 +30,7 @@ const routes: Routes = [
       import('./account/account.module').then((m) => m.AccountModule),
   },
 
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'account/login', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
 
