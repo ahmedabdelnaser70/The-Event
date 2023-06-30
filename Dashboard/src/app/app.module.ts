@@ -39,6 +39,8 @@ import { SpeakerModule } from './Speakers/speaker.module';
 import { SponserModule } from './Sponsers/sponser.module';
 import { NotFoundComponent } from './NotFound/not-found.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { UsersModule } from './Users/users/users.module';
+
 
 @NgModule({
   declarations: [AppComponent, OutlineComponent, NotFoundComponent, TicketComponent],
@@ -73,7 +75,7 @@ import { TicketComponent } from './ticket/ticket.component';
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
-    AccountModule
+    UsersModule
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
   schemas: [

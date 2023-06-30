@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit{
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private toast: ToastrService,
+    //private toast: ToastrService,
     private userStore: UserStoreService,
     private resetpass:ResetPasswordServiceService
   
@@ -57,14 +57,16 @@ export class LoginComponent implements OnInit{
           const tokenPayload = this.auth.decodedToken();
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.userStore.setRoleForStore(tokenPayload.role);
-          this.toast.success("succes");
-          this.router.navigate(['dashboard'])
+          //this.toast.success("succes");
+          this.router.navigate(['/events'])
         },
         error: (err) => {
-          this.toast.error('error', 'somthing error', {
-            timeOut: 3000,
-          });
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
           console.log(err);
+
+
         },
       });
     } else {
@@ -85,16 +87,16 @@ export class LoginComponent implements OnInit{
       this.resetpass.sendResetPasswordLink(this.resetPasswordEmail).
       subscribe({
         next:(res=>{
-          this.toast.success("success");
+          //this.toast.success("success");
           this.resetPasswordEmail="";
           const buttonRef = document.getElementById("closebtn");
           buttonRef?.click();
 
         }),
         error:(err)=>{
-          this.toast.error('error', 'somthing error', {
-            timeOut: 3000,
-          });
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
           console.log(err);
         }
       })
