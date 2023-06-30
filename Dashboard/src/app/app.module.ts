@@ -72,7 +72,7 @@ import { NotFoundComponent } from './NotFound/not-found.component';
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
-    AccountModule
+    
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
   schemas: [

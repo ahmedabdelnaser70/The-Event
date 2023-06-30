@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AccountRoutingModule } from './account-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -22,7 +21,6 @@ import { ResetComponent } from './reset/reset.component';
   ],
   imports: [
     CommonModule,
-    AccountRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule ,
@@ -33,7 +31,6 @@ import { ResetComponent } from './reset/reset.component';
     MatButtonModule,
     MatIconModule,
     
-
   ]
 })
 export class AccountModule { }

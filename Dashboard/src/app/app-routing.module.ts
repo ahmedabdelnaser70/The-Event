@@ -4,29 +4,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './account/login/login.component';
 import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
-import { UsersComponent } from './users/users/users.component';
+import { UsersComponent } from './users/users.component';
 import { SponsersComponent } from './Sponsers/sponsers.component';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { RegisterComponent } from './account/register/register.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'events', component: EventsComponent },
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'speakers', component: SpeakersComponent },
- // { path: 'sponsers', component:  SponserComponent},
-  {
-    path: 'account',
-    loadChildren: () =>
-      import('./account/account.module').then((m) => m.AccountModule),
-  },
-   { path: 'users', component:UsersComponent},
+  { path: 'users', component:UsersComponent},
   { path: 'sponsers', component: SponsersComponent },
+  {path:'register',component:RegisterComponent},
   // { path: 'tickets', component:  },
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },
-  { path: '', redirectTo: 'account/login', pathMatch: 'full' },
   // {path: "**", component: DNotFoundComponent},
 
   { path: '**', component: NotFoundComponent },
