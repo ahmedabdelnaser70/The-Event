@@ -4,10 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './account/login/login.component';
 import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
-import { UsersComponent } from './users/users.component';
 import { SponsersComponent } from './Sponsers/sponsers.component';
 import { NotFoundComponent } from './NotFound/not-found.component';
 import { RegisterComponent } from './account/register/register.component';
+import { UsersComponent } from './Users/users/users.component';
 
 
 const routes: Routes = [

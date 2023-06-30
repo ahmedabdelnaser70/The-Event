@@ -9,10 +9,14 @@ import { UserStoreService } from 'src/app/account/Services/user-store.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private api : ApiService, private auth: AuthService, private userStore: UserStoreService) { }
+  constructor(private api : ApiService, public auth: AuthService, private userStore: UserStoreService) { }
   logout(){
     this.auth.signOut();
   }
   
+  logincheck(){
+    this.auth.isLoggedIn();
+    console.log(this.auth.isLoggedIn)
+  }
   
 }

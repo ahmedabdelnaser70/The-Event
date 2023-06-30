@@ -35,6 +35,8 @@ export class UsersComponent implements OnInit {
     })
   }
 
- 
+  logout(){
+    this.auth.signOut();
+  }
 
 }

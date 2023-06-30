@@ -38,6 +38,8 @@ import { AccountModule } from './account/account.module';
 import { SpeakerModule } from './Speakers/speaker.module';
 import { SponserModule } from './Sponsers/sponser.module';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { UsersModule } from './Users/users/users.module';
+
 
 @NgModule({
   declarations: [AppComponent, OutlineComponent, NotFoundComponent],
@@ -72,7 +74,7 @@ import { NotFoundComponent } from './NotFound/not-found.component';
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
-    
+    UsersModule
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
   schemas: [
