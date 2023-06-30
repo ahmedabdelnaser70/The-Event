@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'speakers', component: SpeakersComponent },
   { path: 'users', component:UsersComponent},
   { path: 'sponsers', component: SponsersComponent },
-  // { path: 'tickets', component:  },
+  {path:'register',component:RegisterComponent},
+  { path: 'tickets', component:TicketComponent},
+
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },
