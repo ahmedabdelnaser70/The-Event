@@ -38,6 +38,7 @@ import { EventModule } from './Events/event.module';
 import { SpeakerModule } from './Speakers/speaker.module';
 import { SponserModule } from './Sponsers/sponser.module';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { HotelModule } from './Hotels/hotel.module';
 
 @NgModule({
   declarations: [AppComponent, OutlineComponent, NotFoundComponent],
@@ -73,6 +74,7 @@ import { NotFoundComponent } from './NotFound/not-found.component';
     MatPaginatorModule,
     MatDialogModule,
     MatSnackBarModule,
+    HotelModule,
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
 })

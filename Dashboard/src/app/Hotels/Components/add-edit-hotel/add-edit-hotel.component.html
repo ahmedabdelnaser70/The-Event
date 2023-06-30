@@ -1,0 +1,77 @@
+<div mat-dialog-title>Speaker Form</div>
+<div mat-dialog-content class="content">
+  <form [formGroup]="hotelForm" (ngSubmit)="onFormSubmit()">
+    <!----------- Hotel Name  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Hotel Name</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="hotelName"
+          placeholder="EX: Ahmed"
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Hotel address  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Hotel address</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="hotelAddress"
+          placeholder="EX: 1st st ..."
+        />
+      </mat-form-field>
+    </div>
+    <!----------- Hotel Description  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Hotel Description</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="hotelDescription"
+          placeholder="EX: more details about Hotel ..."
+        />
+      </mat-form-field>
+    </div>
+    <!----------- Hotel Contact  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Hotel Contact</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="hotelContactinfo"
+          placeholder="EX: +1 0549 6476 45 ..."
+        />
+      </mat-form-field>
+    </div>
+
+    <!----------- Hotel Image  ------------->
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Choose image</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="hotelImage"
+          placeholder="Ex: .svg/.jpg/.png....."
+        />
+      </mat-form-field>
+    </div>
+
+    <!--------------- action buttons ----------->
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="warn" [mat-dialog-close]="false">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>

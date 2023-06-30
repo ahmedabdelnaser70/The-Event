@@ -4,52 +4,49 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { EventService } from './Services/event.service';
-import { AddEditEventComponent } from './Components/add-edit-event/add-edit-event.component';
+import { HotelService } from './Services/hotel.service';
+import { AddEditHotelComponent } from './Components/add-edit-hotel/add-edit-hotel.component';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss'],
+  selector: 'app-hotels',
+  templateUrl: './hotels.component.html',
+  styleUrls: ['./hotels.component.scss'],
 })
-export class EventsComponent implements OnInit {
+export class HotelsComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private snackBar: MatSnackBar,
-    public eventService: EventService
+    public hotelService: HotelService
   ) {}
 
-  events: any;
+  hotels: any;
   detailsId = 0;
   displayedColumns: string[] = [
     'id',
-    'EventName',
-    'DateFrom',
-    'DateTo',
-    // 'Description',
+    'HotelName',
+    'HotelAddress',
     // 'Image',
     'Action',
   ];
 
   ngOnInit(): void {
-    this.eventService.getAll().subscribe((data: any) => {
+    this.hotelService.getAll().subscribe((data: any) => {
       console.log(data);
-
-      this.events = new MatTableDataSource(data);
-      this.events.sort = this.sort;
-      this.events.paginator = this.paginator;
+      this.hotels = new MatTableDataSource(data);
+      this.hotels.sort = this.sort;
+      this.hotels.paginator = this.paginator;
     });
   }
 
-  openAddEventForm() {
-    const dialogRef = this._dialog.open(AddEditEventComponent);
+  openAddHotelForm() {
+    const dialogRef = this._dialog.open(AddEditHotelComponent);
     dialogRef.afterClosed().subscribe((data) => {
       if (data) this.ngOnInit();
     });
   }
 
-  openEditEventForm(data: any) {
-    const dialogRef = this._dialog.open(AddEditEventComponent, { data });
+  openEditHotelForm(data: any) {
+    const dialogRef = this._dialog.open(AddEditHotelComponent, { data });
     dialogRef.afterClosed().subscribe((d) => {
       if (d) this.ngOnInit();
     });
@@ -57,8 +54,8 @@ export class EventsComponent implements OnInit {
 
   remove(id: number) {
     if (confirm('Are you sure')) {
-      this.eventService.deleteEvent(id).subscribe((a) => {
-        this.snackBar.open(`Event has been deleted successfully!`, 'ok', {
+      this.hotelService.deleteHotel(id).subscribe((a) => {
+        this.snackBar.open(`Speaker has been deleted successfully!`, 'ok', {
           duration: 3000,
           verticalPosition: 'top',
         });
@@ -74,10 +71,10 @@ export class EventsComponent implements OnInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.events.filter = filterValue.trim().toLowerCase();
+    this.hotels.filter = filterValue.trim().toLowerCase();
 
-    if (this.events.paginator) {
-      this.events.paginator.firstPage();
+    if (this.hotels.paginator) {
+      this.hotels.paginator.firstPage();
     }
   }
 

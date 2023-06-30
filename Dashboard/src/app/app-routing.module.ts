@@ -6,6 +6,7 @@ import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
 import { SponsersComponent } from './Sponsers/sponsers.component';
 import { NotFoundComponent } from './NotFound/not-found.component';
+import { HotelsComponent } from './Hotels/hotels.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'speakers', component: SpeakersComponent },
   { path: 'sponsers', component: SponsersComponent },
   // { path: 'tickets', component:  },
-  // { path: 'hotels', component:  },
+  { path: 'hotels', component: HotelsComponent },
   // { path: 'gallary', component:  },
   // { path: 'eventvenue', component:  },
 

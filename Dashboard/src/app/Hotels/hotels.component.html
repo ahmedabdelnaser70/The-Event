@@ -4,23 +4,23 @@
     class="filter"
     matInput
     (keyup)="applyFilter($event)"
-    placeholder="Ex. Abdelrahman"
+    placeholder="Ex. Ahmed"
     #input
   />
 </mat-form-field>
 <p>
   <mat-toolbar>
-    <span>Events</span>
+    <span>Hotels</span>
     <span class="example-spacer"></span>
-    <button mat-raised-button class="addButton" (click)="openAddEventForm()">
-      Add New Event
+    <button mat-raised-button class="addButton" (click)="openAddHotelForm()">
+      Add New Hotel
     </button>
   </mat-toolbar>
 </p>
 
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="events" matSort>
-    <!-- Event Id Column -->
+  <table mat-table [dataSource]="hotels" matSort>
+    <!-- Hotel Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
       <td mat-cell *matCellDef="let row">
@@ -28,45 +28,25 @@
       </td>
     </ng-container>
 
-    <!-- Event Column -->
-    <ng-container matColumnDef="EventName">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Event Name</th>
+    <!-- Hotel Name Column -->
+    <ng-container matColumnDef="HotelName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Hotel Name</th>
       <td mat-cell *matCellDef="let row">
-        {{ row.eventName }}
+        {{ row.hotelName }}
       </td>
     </ng-container>
 
-    <!-- Date From Column -->
-    <ng-container matColumnDef="DateFrom">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Date From</th>
-      <td mat-cell *matCellDef="let row">{{ row.eventDate | date }}</td>
+    <!-- Hotel Address From Column -->
+    <ng-container matColumnDef="HotelAddress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Hotel Address</th>
+      <td mat-cell *matCellDef="let row">{{ row.hotelAddress }}</td>
     </ng-container>
 
-    <!-- Date To Column -->
-    <ng-container matColumnDef="DateTo">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Date To</th>
-      <td mat-cell *matCellDef="let row">{{ row.eventTime | date }}</td>
-    </ng-container>
-
-    <!-- Event Description Column -->
-    <!-- <ng-container matColumnDef="Description">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>
-        Event Description
-      </th>
-      <td mat-cell *matCellDef="let row">{{ row.eventDescription }}</td>
-    </ng-container> -->
-
-    <!-- Event Image Column -->
-    <!-- <ng-container matColumnDef="Image">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
-      <td mat-cell *matCellDef="let row">{{ row.eventImage }}</td>
-    </ng-container> -->
-
-    <!-- Edit & Delete Event Column -->
+    <!-- Edit & Delete Hotel Column -->
     <ng-container matColumnDef="Action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button (click)="openEditEventForm(row)">
+        <button mat-icon-button (click)="openEditHotelForm(row)">
           <mat-icon class="text-primary">edit</mat-icon>
         </button>
         <button mat-icon-button (click)="remove(row.id)">
@@ -94,5 +74,5 @@
     aria-label="Select page of users"
   ></mat-paginator>
   <hr />
-  <app-event-details [id]="detailsId"></app-event-details>
+  <app-hotel-details [id]="detailsId"></app-hotel-details>
 </div>
