@@ -22,6 +22,7 @@ const routes: Routes = [
     path: 'sponser',
     loadChildren: () =>
       import('./Sponsers/sponsers.module').then((m) => m.SponsersModule),
+      canActivate:[AuthGuard]
   },
   {
     path: 'account',

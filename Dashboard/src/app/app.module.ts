@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,NO_ERRORS_SCHEMA } from '@angular/core';
 import {
   CommonModule,
   HashLocationStrategy,
@@ -73,5 +73,8 @@ import { SpeakerModule } from './Speakers/speaker.module';
     AccountModule
   ],
   exports: [MatTableModule, MatSortModule, MatPaginatorModule],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class AppModule {}

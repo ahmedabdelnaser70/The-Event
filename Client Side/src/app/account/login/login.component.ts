@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgToastService } from 'ng-angular-popup';
+//import { NgToastService } from 'ng-angular-popup';
+//import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../Services/auth.service';
 import { UserStoreService } from '../Services/user-store.service';
 import ValidateForm from '../../helpers/validationform';
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit{
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private toast: NgToastService,
+    //private toast: ToastrService,
     private userStore: UserStoreService,
     private resetpass:ResetPasswordServiceService
   
@@ -57,11 +58,13 @@ export class LoginComponent implements OnInit{
           const tokenPayload = this.auth.decodedToken();
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.userStore.setRoleForStore(tokenPayload.role);
-          this.toast.success({detail:"SUCCESS", summary:res.message, duration: 5000});
-          this.router.navigate(['home'])
+         // this.toast.success("succes");
+          this.router.navigate(['/home'])
         },
         error: (err) => {
-          this.toast.error({detail:"ERROR", summary:"Something when wrong!", duration: 5000});
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
           console.log(err);
         },
       });
@@ -83,14 +86,16 @@ export class LoginComponent implements OnInit{
       this.resetpass.sendResetPasswordLink(this.resetPasswordEmail).
       subscribe({
         next:(res=>{
-          this.toast.success({detail:"SUCCESS", summary:"Reset Password success", duration: 5000});
+         // this.toast.success("success");
           this.resetPasswordEmail="";
           const buttonRef = document.getElementById("closebtn");
           buttonRef?.click();
 
         }),
         error:(err)=>{
-          this.toast.error({detail:"ERROR", summary:"Something when wrong!", duration: 5000});
+          // this.toast.error('error', 'somthing error', {
+          //   timeOut: 3000,
+          // });
           console.log(err);
         }
       })

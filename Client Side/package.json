@@ -25,8 +25,9 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
     "creditcardpayments": "^1.0.3",
-    "ng-angular-popup": "^0.4.4",
+    "ng-angular-popup": "^0.3.0",
     "ngx-paypal": "^11.0.0",
+    "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

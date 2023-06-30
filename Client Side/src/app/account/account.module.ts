@@ -33,7 +33,6 @@ import { ResetComponent } from './reset/reset.component';
     MatButtonModule,
     MatIconModule,
     
-
   ]
 })
 export class AccountModule { }

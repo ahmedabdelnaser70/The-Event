@@ -4,20 +4,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './account/login/login.component';
 import { EventsComponent } from './Events/events.component';
 import { SpeakersComponent } from './Speakers/speakers.component';
-import { SponserComponent } from './sponsers/sponser/sponser.component';
+import { UsersComponent } from './users/users/users.component';
+
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'events', component: EventsComponent },
   // { path: 'login', component: LoginComponent },
-  
   { path: 'speakers', component: SpeakersComponent },
-  { path: 'sponsers', component:  SponserComponent},
+ // { path: 'sponsers', component:  SponserComponent},
   {
     path: 'account',
     loadChildren: () =>
       import('./account/account.module').then((m) => m.AccountModule),
   },
+   { path: 'users', component:UsersComponent},
   // { path: 'tickets', component:  },
   // { path: 'hotels', component:  },
   // { path: 'gallary', component:  },
