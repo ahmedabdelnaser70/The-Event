@@ -24,19 +24,6 @@
             ea omnis ex expedita sapiente molestias atque. Optio voluptas et.
           </p>
 
-          <p>
-            Aboriosam inventore dolorem inventore nam est esse. Aperiam
-            voluptatem nisi molestias laborum ut. Porro dignissimos eum. Tempore
-            dolores minus unde est voluptatum incidunt ut aperiam.
-          </p>
-
-          <p>
-            Et dolore blanditiis officiis non quod id possimus. Optio non
-            commodi alias sint culpa sapiente nihil ipsa magnam. Qui eum alias
-            provident omnis incidunt aut. Eius et officia corrupti omnis error
-            vel quia omnis velit. In qui debitis autem aperiam voluptates unde
-            sunt et facilis.
-          </p>
           <h2>Event Speaker</h2>
           <p>{{ event.speakers }}</p>
 
@@ -57,11 +44,13 @@
     <div class="row m-2">
       <div class="col-5"></div>
       <div class="col-3">
-        <a class="buy-tickets scrollto" [routerLink]="['/event/ticket/',event.id]"
+        <a
+          class="buy-tickets scrollto"
+          [routerLink]="['/event/ticket/', event.id]"
           ><b>Book Your Ticket</b>
         </a>
       </div>
     </div>
   </div>
 </section>
-<app-event-schedule></app-event-schedule>
+<!-- <app-event-schedule></app-event-schedule> -->

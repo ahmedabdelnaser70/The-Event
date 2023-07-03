@@ -70,8 +70,9 @@
       <mat-form-field appearance="outline">
         <mat-label>Select Speaker</mat-label>
         <mat-select formControlName="speakers" multiple>
-          <mat-option>dd</mat-option>
-          <mat-option>dd</mat-option>
+          <mat-option>Adele</mat-option>
+          <mat-option>Ed sheren</mat-option>
+          <mat-option>Zyan Malek</mat-option>
           <!-- <mat-option *ngFor="let item of speakers" [value]="item.id">
             {{ item.speakerName }}
           </mat-option> -->
@@ -80,15 +81,18 @@
       <mat-form-field appearance="outline">
         <mat-label>Select Sponser</mat-label>
         <mat-select formControlName="sponsers" multiple>
-          <mat-option>ee</mat-option>
-          <mat-option>ee</mat-option>
+          <mat-option>Pepsi</mat-option>
+          <mat-option>Nike</mat-option>
+          <mat-option>Cocacola</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
 
     <!--------------- action buttons ----------->
     <div mat-dialog-actions class="action">
-      <button mat-raised-button color="warn" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="false">
+        Cancel
+      </button>
       <button mat-raised-button color="primary" type="submit">
         {{ data ? "Update" : "Save" }}
       </button>

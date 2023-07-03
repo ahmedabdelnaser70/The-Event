@@ -45,13 +45,12 @@
           >
         </li>
 
-
         <!-- <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li> -->
         <li>
-          <a class="nav-link scrollto" href="/#venue">Venue</a>
+          <a class="nav-link scrollto" href="#venue">Venue</a>
         </li>
         <li>
-          <a class="nav-link scrollto" href="/#hotels">Hotels</a>
+          <a class="nav-link scrollto" href="#hotels">Hotels</a>
         </li>
         <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
 
@@ -72,14 +71,26 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul>
         </li> -->
-        <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
     <!-- .navbar -->
-    <a class="buy-tickets scrollto" *ngIf="logincheck"  routerLink="/account/login" >Login</a>
-    <a class="buy-tickets scrollto" *ngIf="logincheck"  routerLink="/account/register">Register</a>
-    <a class="buy-tickets scrollto" *ngIf="!logincheck"  (click)="logout()">Logout</a>
+    <a
+      class="buy-tickets scrollto"
+      *ngIf="logincheck"
+      routerLink="/account/login"
+      >Login</a
+    >
+    <a
+      class="buy-tickets scrollto"
+      *ngIf="logincheck"
+      routerLink="/account/register"
+      >Register</a
+    >
+    <a class="buy-tickets scrollto" *ngIf="logincheck" (click)="logout()"
+      >Logout</a
+    >
   </div>
 </header>
 <!-- End Header -->
