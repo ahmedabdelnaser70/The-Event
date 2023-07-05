@@ -8,7 +8,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Features
 
-- Created Admin dashboard  
+- Created Admin dashboard
+- Buy a ticket using Paypal
+- Event | Sponsor |speaker details
 - Implemented Authentication & Authorization module.
 
 ## Code scaffolding
